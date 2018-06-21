@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Laravel\Passport\Client;
 use Illuminate\Support\Facades\Route;
 
@@ -66,6 +68,17 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
+//        $accessToken = Auth::user()->token();
+     return   $accessToken = Auth::user()->id;
 
+//        DB::table('oauth_refresh_tokens')
+//            ->where('access_token_id', $accessToken->id)
+//            ->update(['revoked' => true]);
+//
+//        $accessToken->revoke();
+//
+//        return response()->json([], 204);
+
+//    $refreshToken =
     }
 }
