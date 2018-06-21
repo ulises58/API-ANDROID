@@ -18,12 +18,12 @@ Route::post('register', 'Api\Auth\RegisterController@register');
 // controlador login
 Route::post('login', 'Api\Auth\LoginController@login');
 Route::post('refresh', 'Api\Auth\LoginController@refresh');
-Route::post('logout', 'Api\Auth\LoginController@logout');
+
 
 
 
 // Todas las rutas que tinen que ser portegidas por el token
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function () {
+    Route::post('logout', 'Api\Auth\LoginController@logout');
 });
