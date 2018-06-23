@@ -7,10 +7,10 @@
 use git
 
 ```bash
-git clone https://github.com/ulises58/API-ANDROID.git
+git clone https://github.com/ulises58/Laravel_Simple_Api_Demo.git
 ```
 
-Or download from [Here](https://github.com/ulises58/API-ANDROID/archive/master.zip)
+Or download from [Here](https://github.com/ulises58/Laravel_Simple_Api_Demo/archive/master.zip)
 
 1- In the root folder execute.
 ```
